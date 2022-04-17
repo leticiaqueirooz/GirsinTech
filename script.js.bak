@@ -1,0 +1,63 @@
+//Some colors
+const colors = ["#FFF", "#d91694", "#517d57", "#0c3a96", "#F85F36", "#BBE3A3"];
+const numBalls = 100;
+const balls = [];
+
+for (let i = 0; i < numBalls; i++) {
+  let ball = document.createElement("div");
+  ball.classList.add("ball");
+  ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+  ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
+  ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
+  ball.style.transform = `scale(${Math.random()})`;
+  ball.style.width = `${Math.random()}em`;
+  ball.style.height = ball.style.width;
+
+  balls.push(ball);
+  document.body.append(ball);
+}
+
+// Keyframes
+balls.forEach((el, i, ra) => {
+  let to = {
+    x: Math.random() * (i % 2 === 0 ? -11 : 11),
+    y: Math.random() * 12,
+  };
+
+  let anim = el.animate(
+    [
+      { transform: "translate(0, 0)" },
+      { transform: `translate(${to.x}rem, ${to.y}rem)` },
+    ],
+    {
+      duration: (Math.random() + 1) * 2000, // color duration
+      direction: "alternate",
+      fill: "both",
+      iterations: Infinity,
+      easing: "ease-in-out",
+    }
+  );
+});
+
+
+
+
+$(document).ready(function(){
+  $(".form-wrapper .button").click(function(){
+    var button = $(this);
+    var currentSection = button.parents(".section");
+    var currentSectionIndex = currentSection.index();
+    var headerSection = $('.steps li').eq(currentSectionIndex);
+    currentSection.removeClass("is-active").next().addClass("is-active");
+    headerSection.removeClass("is-active").next().addClass("is-active");
+
+    $(".form-wrapper").submit(function(e) {
+      e.preventDefault();
+    });
+
+    if(currentSectionIndex === 3){
+      $(document).find(".form-wrapper .section").first().addClass("is-active");
+      $(document).find(".steps li").first().addClass("is-active");
+    }
+  });
+});

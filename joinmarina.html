@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Join us Girls in Tech</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <!-- <link rel="stylesheet" href="leticiastyle.css" /> -->
+     <!-- <link rel="stylesheet" href="marinastyle.css" /> -->
+
+    <script src="./script.js"></script>
+  </head>
+
+  <body>
+      <!-- animation bg -->
+      <div class="grid-container-index">
+        <div class="header">
+          <nav id="nav">
+            <ul class="nav navbar-nav">
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="whymarina.html">WHY ARE WE HERE?</a></li>
+              <li><a href="wholeticia.html">WHO WE ARE?</a></li>
+              <li><a href="howleticia.html">HOW IT WORKS?</a></li>
+              <li class="active"><a href="joinmarina.html">JOIN US</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="flex-form">
+          <div class="form">
+            <form id="contactform">
+              <p class="contact"><label for="name">Name</label></p>
+              <input
+                id="name"
+                name="name"
+                placeholder="First and last name"
+                required=""
+                tabindex="1"
+                type="text"
+              />
+
+              <p class="contact"><label for="email">Email</label></p>
+              <input
+                id="email"
+                name="email"
+                placeholder="example@domain.com"
+                required=""
+                type="email"
+              />
+
+              <p class="contact">
+                <label for="username">Create an username</label>
+              </p>
+              <input
+                id="username"
+                name="username"
+                placeholder="username"
+                required=""
+                tabindex="2"
+                type="text"
+              />
+
+              <p class="contact">
+                <label for="psw">Create a password</label>
+              </p>
+              <input
+                type="password"
+                id="psw"
+                name="password"
+                placeholder="Enter your password"
+                pattern="(?=.*[A-Z]).{9}"
+                title="Must contain at least one uppercase and 9 characters"
+                required=""
+              />
+              <p class="contact"><label for="address">Address</label></p>
+              <input type="address" id="address" name="address" required="" />
+
+              <p class="contact"><label for="phone">Mobile phone</label></p>
+              <input
+                id="phone"
+                name="phone"
+                placeholder="phone number"
+                required=""
+                type="text"
+              />
+
+              <fieldset>
+                <label
+                  >Date of Birth
+                  <input
+                    class="birthday"
+                    input
+                    type="date"
+                    id="birthday"
+                    name="birthday"
+                    required=""
+                /></label>
+              </fieldset>
+
+              <select class="select-style profile" name="profile">
+                <option value="select">I am..</option>
+                <option value="v">Volunteer - Sending help</option>
+                <option value="s">Student - Asking for help</option></select
+              ><br /><br />
+
+              <select class="select-style plan" name="plan">
+                <option value="select">Plan</option>
+                <option value="st">Starter</option>
+                <option value="pr">Project</option>
+                <option value="fu">Full year</option>
+                <option value="vo">I'm a volunteer</option></select
+              ><br /><br />
+
+              <br />
+              <input
+                class="buttom"
+                name="submit"
+                id="submit"
+                tabindex="5"
+                value="Join us!"
+                type="submit"
+              />
+              </div>
+            </form>
+          </div>
+          
+        </div>
+      <div class="footer" style="color: white;">
+          <p>
+          <br /><br />
+          Girls in Tech <br />
+          By Letícia B de Queiroz & Marina Dutra Andrigo
+          </p>
+      </div>
+    </div>
+  </body>
+</html>
